@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8" />
+	<title>ABET - Associação Brasileira de Estudiosos de Tornados</title>
+	<link rel="icon" type="image/png" href="icon-tornado.png" />
+	<link rel="stylesheet" href="css/normalize.css" />
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700' rel='stylesheet' type='text/css' />
+	<link rel="stylesheet" href="css/estilo.css" />
+</head>
+<body>
+	<div class="header">
+		<div class="linha">
+			<header>
+				<div class="coluna col4">
+					<center><h1 class="logo"><img src = "icon-tornado.png" width="100px"></h1></center>
+				</div>
+			</header>
+		</div>
+	</div>
+	<div>
+		<section>
+			<script>
+				var usuarios = [
+    				{"login": "emanuelledias", "senha": "banana"},
+    				{"login": "claudiofernandes", "senha": "abacaxi"},
+    				{"login": "juliovieira", "senha": "melancia"},
+					{"login": "sandrogoncalves", "senha": "uvaverde"},
+    				{"login": "giovannifigueiredo", "senha": "abacate"},
+    				{"login": "juanandrade", "senha": "melancia"},
+				];
+				function validar() {
+					var usuario = document.getElementsByName('login')[0].value;
+    				var senha = document.getElementsByName('senha')[0].value;
+
+    				for (var u in usuarios) {
+        			var us = usuarios[u];
+        			if (us.login === usuario && us.senha === senha) {
+            			window.location = "index.html";
+            			return true;
+        			}
+    			}
+    				alert("Dados incorretos, tente novamente.");
+    				return false;
+				}
+
+			</script>
+		<form name = "tornado" action="paginaedicao.html" onsubmit="return validar()" method="post">
+				<br>
+				<center><label for="login">Login:</label><br> 
+				<input type="text" id="login" name="login"><br> 
+				<label for="senha">Senha:</label><br> 
+				<input type="password" id="senha" name="senha"><br><br>
+				<input type="submit" value="Enviar" id="submitos"></center>
+			  </form>
+		</section>
+	</div>
+</body>
